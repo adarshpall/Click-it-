@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate.ejs") %>
   <body>
     <h3>Create a New Listing</h3>
-    <form method="POST" action="/listings">
+    <form method="POST" action="/listings" novalidate class="needs-validation">
       <input name="listing[title]" placeholder="enter title" type="text" />
       <br /><br />
       <textarea
