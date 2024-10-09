@@ -1,42 +1,49 @@
-body{
+body {
+    
     font-family: 'Plus Jakarta Sans', sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
-.container{
+.container {
     flex: 1;
 }
 
 /* Navbar */
-.navbar{
+.navbar {
     height: 5rem;
-    background-color: white;
+    background-color: antiquewhite;;
+}
+.fa-mouse-pointer {
+    color:#333333;
+    font-size: 2rem;
+
+}
+.logo{
+    /* color: #fe424d; */
+    color:#0099CC;
+    /* color: #7da2a9; */
+    font-size: 2.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
-.fa-ghost{
-    color: #fe424d;
-    font-size: 3rem;
+.nav-link {
+    /* !important must override other style and apply it  */
+    color: #222222 !important;  
+    margin-left: 20px;
 }
 
-.nav-link{
-    color: #222222 !important;
-}
-
-.navbar-nav .logo{
-    color: #fe424d !important;
-    font-weight: 1000 !important;
-    font-size: 30px !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
- 
-    
-}
 /* Footer */
 .f-info-links a {
     text-decoration: none;
     color: #222222;
     transition: 0.3s;
+}
+.fa-brands{
+    color: #222222;
 }
 .f-info-links a:hover {
     text-decoration: underline;
@@ -44,92 +51,114 @@ body{
     transform: scale(1.1);
 }
 
-.f-info-links , .f-info-socials , .f-info-brand{ 
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
     width: 100%;
+    vertical-align: mid;
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 
-
-.f-info-socials i{
-    margin-right: 1rem;
+.f-info-socials i {
     font-size: 1.5rem;
+    margin-right: 1rem;
 }
-.f-info{
+
+.f-info {
     text-align: center;
-    display: flex;
     height: 8rem;
     background-color: #ebebeb;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: space-evenly;
 }
 
-/* Cards */
 
-.listing-card{
+/* Cards */
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
-
 }
-.card-img-top{
+
+.card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
-    object-fit: cover;
-
+    object-fit: cover !important;
 }
-.card-body{
+
+.card-body {
     padding: 0 !important;
 }
-.card-text p {
-    font-weight: 400 !important;
 
+.card-text {
+    font-weight: 400 !important;
 }
-.listing-link{
+
+.listing-link {
     text-decoration: none;
 }
+.listing-link:hover {
+    text-decoration: none;
 
-/* Card-Effect */
-
-.card-img-overlay{
-    opacity: 0;
 }
-.card-img-overlay:hover{
+
+.card-img-overlay:hover {
     opacity: 0.2;
-    background-color: white;
+    background-color: paleturquoise;
 }
 
-/* New Page */
-.add-btn{
-    background-color:  #fe424d !important;
+/* new page */
+.btn {
+    background-color:#fe424d  ;
     border: none !important;
 }
 
-/* Edit Page */
-.edit-btn{
-    background-color:  #fe424d !important;
+/* add new page form*/
+#all {
+    background-color:wheat;
+    opacity: 2;
+    margin:auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.newform {
+    padding: 20px; 
+}
+
+/* Edit page form */
+.editbtn {
     border: none !important;
+    color: white;
 }
 
-/* Show Image */
-.show-img{
-    height: 30vh;
+.btn-delete {
+    border: none !important;
+    color: white;
+    background-color: #fe424d !important;
 }
 
-.btns{
+#all2 {
+    background-color:wheat;
+    opacity: 2;
+    margin:auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.editform {
+    padding: 20px; 
+}
+
+/* show page */
+.show-img {
+    height: 35vh;
+}
+
+.btn1 {
     display: flex;
-}
-
-.show-card{
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/* MAp */
-
-#map {
-    height: 400px;
-    width: 80vh;
-
 }
