@@ -9,6 +9,11 @@ module.exports.index = async (req, res) => {
 module.exports.locations = async (req, res) => { 
     console.log(req.body.search);
     const allListings = await Listing.find({location:req.body.search})
+    
+    if(!allListings[0]){
+        req.flash("error", "Destination you requested for is not registered here yet ")
+        res.redirect("/listings");
+    }
 
     res.render ("listings/index.ejs", {allListings});
 };
@@ -32,6 +37,13 @@ module.exports.showListing = async (req, res) => {
     }
     console.log(listing);
     res.render("listings/show.ejs", { listing });
+};
+
+module.exports.privacy = (req, res) => {
+    res.render("listings/privacy.ejs");
+};
+module.exports.terms = (req, res) => {
+    res.render("listings/terms.ejs");
 };
 
 

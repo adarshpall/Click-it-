@@ -23,9 +23,11 @@ router
         wrapAsync(lisitngController.createListing)
     );
    
-
-    router.post("/locations", isLoggedIn, lisitngController.locations );
-
+router.get("/Privacy",isLoggedIn,lisitngController.privacy);
+    router.post("/locations", isLoggedIn, wrapAsync(lisitngController.locations) );
+   
+    router.get("/Terms",isLoggedIn,lisitngController.terms);
+    
 //New Route
 router.get("/new", isLoggedIn, lisitngController.renderNewForm );
 
